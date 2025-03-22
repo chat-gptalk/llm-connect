@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: LLM connect
+  ai:
+    openai:
+      api-key: sk-1234
+      base-url: "https://exampleopenaiendpoint-production.up.railway.app"
+  r2dbc:
+    pool:
+      enabled: true
+      initial-size: 10
+      max-size: 100
+      validation-query: "select 1"
+    url: r2dbc:postgresql://localhost:5432/llm_connect
+    username: postgres
+    password: root
